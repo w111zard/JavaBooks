@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javabooks.controllers.OrderController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #3700B3;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@literature-xxl.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="118.0" layoutY="763.0" text="By Denis Golosko" textFill="WHITE" />
+                <VBox alignment="TOP_CENTER" layoutX="74.0" layoutY="231.0" prefHeight="404.0" prefWidth="202.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onButtonBookClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Книги" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonClientClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Клиенты" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonOrderClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Заказы" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonProfileClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Профиль" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonExitClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Выход" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children></AnchorPane>
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="200.0" spacing="30.0">
+                    <children>
+                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onButtonAddClick" style="-fx-background-color: transparent;" text="Добавить">
+                            <graphic>
+                                <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Add_ring@3x.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onButtonEditClick" style="-fx-background-color: transparent;" text="Изменить">
+                            <graphic>
+                                <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Edit@3x.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onButtonDeleteClick" style="-fx-background-color: transparent;" text="Удалить">
+                            <graphic>
+                                <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Dell@3x.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onButtonRefreshClick" style="-fx-background-color: transparent;" text="Обновить">
+                            <graphic>
+                                <ImageView fitHeight="52.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Refresh_2@3x.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <TableView fx:id="orderTable" prefHeight="725.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="columnId" prefWidth="170.0" text="id" />
+                        <TableColumn fx:id="columnClientId" prefWidth="170.0" text="client_id" />
+                        <TableColumn fx:id="columnCashierId" prefWidth="170.0" text="cashier_id" />
+                        <TableColumn fx:id="columnBookId" prefWidth="170.0" text="book_id" />
+                        <TableColumn fx:id="columnDate" prefWidth="170.0" text="date" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>

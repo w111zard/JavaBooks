@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javabooks.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javabooks.controllers.Login">
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #3700B2;" BorderPane.alignment="CENTER">
          <children>
@@ -47,7 +47,7 @@
                   <Font size="40.0" />
                </font>
             </Label>
-            <Label layoutX="47.0" layoutY="226.0" text="Имя">
+            <Label layoutX="47.0" layoutY="226.0" text="E-mail">
                <font>
                   <Font size="20.0" />
                </font>
@@ -57,7 +57,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="usernameTextField" layoutX="175.0" layoutY="224.0" prefHeight="24.0" prefWidth="295.0" promptText="Имя пользователя">
+            <TextField fx:id="emailTextField" layoutX="175.0" layoutY="224.0" prefHeight="24.0" prefWidth="295.0" promptText="E-mail">
                <font>
                   <Font size="15.0" />
                </font></TextField>
@@ -70,7 +70,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="exitButton" layoutX="37.0" layoutY="484.0" mnemonicParsing="false" onAction="#exitButtonOnClick" prefHeight="45.0" prefWidth="426.0" text="Выход" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="exitButton" layoutX="37.0" layoutY="484.0" mnemonicParsing="false" onAction="#exitButtonOnClick" prefHeight="45.0" prefWidth="426.0" style="-fx-background-color: #3700B2;" text="Выход" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javabooks.controllers.ProfileController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #3700B3;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@literature-xxl.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="118.0" layoutY="763.0" text="By Denis Golosko" textFill="WHITE" />
+                <VBox alignment="TOP_CENTER" layoutX="74.0" layoutY="231.0" prefHeight="404.0" prefWidth="202.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onButtonBookClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Книги" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonClientClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Клиенты" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonOrderClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Заказы" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonProfileClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Профиль" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onButtonExitClick" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Выход" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children></AnchorPane>
+    </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lastNameLabel" alignment="CENTER" layoutX="149.0" layoutY="328.0" prefHeight="49.0" prefWidth="553.0" text="Фамилия">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstNameLabel" alignment="CENTER" layoutX="149.0" layoutY="389.0" prefHeight="49.0" prefWidth="553.0" text="Имя">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="secondNameLabel" alignment="CENTER" layoutX="149.0" layoutY="448.0" prefHeight="49.0" prefWidth="553.0" text="Отчество">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="204.0" fitWidth="204.0" layoutX="324.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@User_alt@5x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
